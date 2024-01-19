@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Relógio em JavaScript</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 100px;
+    }
+
+    #clock {
+      font-size: 2em;
+    }
+  </style>
+</head>
+<body>
+  <div id="clock"></div>
+
+  <script>
+    function updateClock() {
+      const now = new Date();
+      const hours = now.getHours();
+      const minutes = now.getMinutes();
+      const seconds = now.getSeconds();
+
+      const formattedTime = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+
+      document.getElementById('clock').textContent = formattedTime;
+    }
+
+    function getBalance() {
+     const url = 'https://topups.reloadly.com/accounts/balance'
+
+     {
+      "token"
+     }
+    }
+
+    // Atualiza o relógio a cada segundo
+    setInterval(updateClock, 1000);
+
+    // Chama a função inicialmente para evitar um atraso de 1 segundo
+    updateClock();
+  </script>
+</body>
+</html>
